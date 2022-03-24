@@ -10,4 +10,5 @@ jobs:
     - name: wget
       uses: wei/wget@v1
       with:
-        args: http://ec2-52-54-170-77.compute-1.amazonaws.com:8080/job/dotnet-ci-cd/build?token=dG9rZW5kZHNpamw7bHNoZGxz
+        args: ${{ secrets.JENKIN_URL }}/job/dotnet-ci-cd/build?token=${{ secrets.JENKIN_TOCKEN }}
+
