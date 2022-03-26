@@ -3,8 +3,10 @@ node{
     {
       deleteDir()
     }
-    stage ('checkout'){
+    stage ('Checkout'){
            checkout scm
     }
-
+    stage('Build Docker Image'){
+       sh"ls;docker build -t dockerdemo ."
+    }
 }
